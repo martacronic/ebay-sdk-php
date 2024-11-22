@@ -12,19 +12,30 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ExternalUserData
  */
-class NotificationUserDataType extends \DTS\eBaySDK\Types\BaseType
+class EnergyEfficiencyLabelType extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ExternalUserData' => [
+        'ImageDescription' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ExternalUserData'
+            'elementName' => 'ImageDescription'
+        ],
+        'ImageURL' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ImageURL'
+        ],
+        'ProductInformationsheet' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ProductInformationsheet'
         ]
     ];
 

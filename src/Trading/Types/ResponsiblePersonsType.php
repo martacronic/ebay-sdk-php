@@ -11,20 +11,19 @@
 namespace DTS\eBaySDK\Trading\Types;
 
 /**
- *
- * @property string $ExternalUserData
+ * @property \DTS\eBaySDK\Trading\Types\ResponsiblePersonType $ResponsiblePerson
  */
-class NotificationUserDataType extends \DTS\eBaySDK\Types\BaseType
+class ResponsiblePersonsType extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ExternalUserData' => [
-            'type' => 'string',
-            'repeatable' => false,
+        'ResponsiblePerson' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ResponsiblePersonType',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'ExternalUserData'
+            'elementName' => 'ResponsiblePerson'
         ]
     ];
 

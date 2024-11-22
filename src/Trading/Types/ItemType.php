@@ -14,8 +14,10 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property string $ApplicationData
  * @property boolean $AutoPay
+ * @property boolean $PrivateListing
  * @property \DTS\eBaySDK\Trading\Types\PaymentDetailsType $PaymentDetails
  * @property \DTS\eBaySDK\Trading\Types\BiddingDetailsType $BiddingDetails
+ * @property \DTS\eBaySDK\Trading\Types\VideoDetailsType $VideoDetails
  * @property boolean $MotorsGermanySearchable
  * @property \DTS\eBaySDK\Trading\Enums\BuyerProtectionCodeType $BuyerProtection
  * @property \DTS\eBaySDK\Trading\Types\AmountType $BuyItNowPrice
@@ -83,6 +85,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property integer $LeadCount
  * @property integer $NewLeadCount
  * @property \DTS\eBaySDK\Trading\Types\NameValueListArrayType $ItemSpecifics
+ * @property \DTS\eBaySDK\Trading\Types\ConditionDescriptorsArrayType $ConditionDescriptors
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ClassifiedAdPayPerLeadFee
  * @property \DTS\eBaySDK\Trading\Types\BuyerProtectionDetailsType $ApplyBuyerProtection
  * @property \DTS\eBaySDK\Trading\Enums\ListingSubtypeCodeType $ListingSubtype2
@@ -121,6 +124,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\AmountType $CeilingPrice
  * @property boolean $IsIntermediatedShippingEligible
  * @property \DTS\eBaySDK\Trading\Types\UnitInfoType $UnitInfo
+ * @property \DTS\eBaySDK\Trading\Types\RegulatoryType $Regulatory
  * @property integer $RelistParentID
  * @property string $ConditionDefinition
  * @property boolean $HideFromSearch
@@ -156,6 +160,18 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AutoPay'
+        ],
+        'PrivateListing' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PrivateListing'
+        ],
+        'VideoDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\VideoDetailsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'VideoDetails'
         ],
         'PaymentDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaymentDetailsType',
@@ -324,6 +340,12 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReservePrice'
+        ],
+        'Regulatory' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\RegulatoryType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Regulatory'
         ],
         'ReviseStatus' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ReviseStatusType',
@@ -564,6 +586,12 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NewLeadCount'
+        ],
+        'ConditionDescriptors' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ConditionDescriptorsArrayType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ConditionDescriptors'
         ],
         'ItemSpecifics' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NameValueListArrayType',

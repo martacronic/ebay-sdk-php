@@ -11,62 +11,61 @@
 namespace DTS\eBaySDK\Trading\Types;
 
 /**
- *
- * @property string $CharityName
- * @property double $DonationPercent
- * @property string $CharityID
- * @property string $Mission
- * @property string $LogoURL
- * @property \DTS\eBaySDK\Trading\Enums\CharityStatusCodeType $Status
- * @property boolean $CharityListing
+ * @property double $RepairScore
+ * @property \DTS\eBaySDK\Trading\Types\ProductSafetyType $ProductSafety
+ * @property \DTS\eBaySDK\Trading\Types\HazmatType $Hazmat
+ * @property \DTS\eBaySDK\Trading\Types\DocumentsType $Documents
+ * @property \DTS\eBaySDK\Trading\Types\ResponsiblePersonsType $ResponsiblePersons
+ * @property \DTS\eBaySDK\Trading\Types\ManufacturerType $Manufacturer
+ * @property \DTS\eBaySDK\Trading\Types\EnergyEfficiencyLabelType $EnergyEfficiencyLabel
  */
-class CharityType extends \DTS\eBaySDK\Types\BaseType
+class RegulatoryType extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'CharityName' => [
-            'type' => 'string',
+        'Manufacturer' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ManufacturerType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'CharityName'
+            'elementName' => 'Manufacturer'
         ],
-        'DonationPercent' => [
+        'EnergyEfficiencyLabel' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\EnergyEfficiencyLabelType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'EnergyEfficiencyLabel'
+        ],
+        'Hazmat' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\HazmatType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Hazmat'
+        ],
+        'Documents' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\DocumentsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Documents'
+        ],
+        'ProductSafety' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ProductSafetyType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ProductSafety'
+        ],
+        'ResponsiblePersons' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ResponsiblePersonsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ResponsiblePersons'
+        ],
+        'RepairScore' => [
             'type' => 'double',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'DonationPercent'
-        ],
-        'CharityID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CharityID'
-        ],
-        'Mission' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Mission'
-        ],
-        'LogoURL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'LogoURL'
-        ],
-        'Status' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Status'
-        ],
-        'CharityListing' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CharityListing'
+            'elementName' => 'RepairScore'
         ]
     ];
 

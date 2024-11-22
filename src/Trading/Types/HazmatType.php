@@ -11,20 +11,40 @@
 namespace DTS\eBaySDK\Trading\Types;
 
 /**
- *
- * @property string $ExternalUserData
+ * @property \DTS\eBaySDK\Trading\Types\StatementsType $Statements
+ * @property \DTS\eBaySDK\Trading\Types\PictogramsType $Pictograms
+ * @property string $SignalWord
+ * @property string $Component
  */
-class NotificationUserDataType extends \DTS\eBaySDK\Types\BaseType
+class HazmatType extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ExternalUserData' => [
+        'SignalWord' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ExternalUserData'
+            'elementName' => 'SignalWord'
+        ],
+        'Component' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Component'
+        ],
+        'Pictograms' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PictogramsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Pictograms'
+        ],
+        'Statements' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\StatementsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Statements'
         ]
     ];
 

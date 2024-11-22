@@ -11,62 +11,75 @@
 namespace DTS\eBaySDK\Trading\Types;
 
 /**
- *
- * @property string $CharityName
- * @property double $DonationPercent
- * @property string $CharityID
- * @property string $Mission
- * @property string $LogoURL
- * @property \DTS\eBaySDK\Trading\Enums\CharityStatusCodeType $Status
- * @property boolean $CharityListing
+ * @property string $CityName
+ * @property string $CompanyName
+ * @property string Email
+ * @property string Phone
+ * @property string PostalCode
+ * @property string StateOrProvince
+ * @property string Street1
+ * @property string Street2
+ * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType $Country
  */
-class CharityType extends \DTS\eBaySDK\Types\BaseType
+class ManufacturerType extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'CharityName' => [
+        'CityName' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'CharityName'
+            'elementName' => 'CityName'
         ],
-        'DonationPercent' => [
-            'type' => 'double',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DonationPercent'
-        ],
-        'CharityID' => [
+        'CompanyName' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'CharityID'
+            'elementName' => 'CompanyName'
         ],
-        'Mission' => [
+        'Country' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Mission'
+            'elementName' => 'Country'
         ],
-        'LogoURL' => [
+        'Email' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'LogoURL'
+            'elementName' => 'Email'
         ],
-        'Status' => [
+        'Phone' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'Status'
+            'elementName' => 'Phone'
         ],
-        'CharityListing' => [
-            'type' => 'boolean',
+        'PostalCode' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'CharityListing'
+            'elementName' => 'PostalCode'
+        ],
+        'StateOrProvince' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'StateOrProvince'
+        ],
+        'Street1' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Street1'
+        ],
+        'Street2' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Street2'
         ]
     ];
 

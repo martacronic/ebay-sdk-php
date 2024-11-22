@@ -12,19 +12,18 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ExternalUserData
  */
-class NotificationUserDataType extends \DTS\eBaySDK\Types\BaseType
+class StatementsType extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ExternalUserData' => [
+        'Statement' => [
             'type' => 'string',
-            'repeatable' => false,
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'ExternalUserData'
+            'elementName' => 'Statement'
         ]
     ];
 
